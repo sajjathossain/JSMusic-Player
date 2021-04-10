@@ -1,0 +1,41 @@
+const musicContainer = document.querySelector(".music-container")
+const prevBtn = document.querySelector("#prev")
+const nextBtn = document.querySelector("#next")
+const audio = document.querySelector("#audio")
+const audioSource = document.querySelector("audio")
+const title = document.querySelector("#title")
+
+// song list
+const songs = ['01. shrek', '02. Short Song', '03. uplifting', '04. aaa2 bgm']
+
+let songIndex = 0;
+
+loadSong(songs[songIndex])
+
+function loadSong(song){
+  title.innerText = song
+  audioSource.src = `./music/${song}.mp3`
+}
+
+function loadPrevSong(){
+  songIndex--
+  
+  if(songIndex < 0){
+    songIndex = songs.length - 1
+  }
+
+  loadSong(songs[songIndex])
+}
+
+function loadNextSong(){
+  songIndex++
+  
+  if(songIndex >= songs.length ){
+    songIndex = 0
+  }
+
+  loadSong(songs[songIndex])
+}
+
+prevBtn.addEventListener("click", loadPrevSong)
+nextBtn.addEventListener("click", loadNextSong)

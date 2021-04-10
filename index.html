@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title id="pageTitle">JSMusic Player</title>
+  
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  
+  <div class="container">
+    <h1>JSMusic Player</h1>
+
+    <div class="music-container">
+      <div class="music-info">
+        <marquee direction="left">
+          <h4 id="title">ukelele</h4>
+        </marquee>
+        <div class="progress-container">
+          <div class="progress"></div>
+        </div>
+      </div>
+
+      <audio controls id="audio" src="">
+      </audio>
+
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
