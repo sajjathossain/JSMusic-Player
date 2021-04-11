@@ -2,7 +2,6 @@ const musicContainer = document.querySelector(".music-container")
 const prevBtn = document.querySelector("#prev")
 const nextBtn = document.querySelector("#next")
 const audio = document.querySelector("#audio")
-const audioSource = document.querySelector("audio")
 const title = document.querySelector("#title")
 const pageTitle = document.querySelector("#pageTitle")
 
@@ -16,7 +15,7 @@ loadSong(songs[songIndex])
 
 function loadSong(song){
   title.innerText = song
-  audioSource.src = `./music/${song}.mp3`
+  audio.src = `./music/${song}.mp3`
   pageTitle.innerHTML = `${songs[songIndex]}`
 }
 
